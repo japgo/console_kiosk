@@ -39,8 +39,7 @@ public class Product extends Menu implements Cloneable {
 	public boolean selectProduct() {
 
 		boolean finishedSelectOption = false;
-		while( true )
-		{
+		while( true ) {
 			try {
 				System.out.printf( "\"%-20s | W %4.1f | %s\"\n", this.name, this.getTotalPrice() / 1000.0, this.description );
 
@@ -50,9 +49,8 @@ public class Product extends Menu implements Cloneable {
 						System.out.printf( "ㄴ %-17s | %s\n", po.getName(), po.getDescription() );
 					}
 
-				}
-				else {
-					System.out.println( "ㄴ 선택된 옵션 없음.");
+				} else {
+					System.out.println( "ㄴ 선택된 옵션 없음." );
 				}
 
 				System.out.println();
@@ -76,15 +74,14 @@ public class Product extends Menu implements Cloneable {
 					} else {
 						System.out.println( "잘못된 입력입니다. 다시 선택해 주세요." );
 					}
-				}
-				else {
+				} else {
 					finishedSelectOption = true;
 				}
 
 				if( finishedSelectOption ) {
 					System.out.println( "위 메뉴를 장바구니에 추가하시겠습니까?" );
 					System.out.println( "1. 확인     2. 취소" );
-					System.out.print( "번호를 선택해 주세요 : ");
+					System.out.print( "번호를 선택해 주세요 : " );
 					int selectNum = Main.input.nextInt();
 					System.out.println();
 					return selectNum == 1;

@@ -33,7 +33,7 @@ public class Order implements Cloneable {
 		System.out.println( "[ Orders ]" );
 		for( int i = 0; i < orderedProductList.size(); i++ ) {
 			Product p = orderedProductList.get( i );
-			System.out.printf("%d. %-20s | W %4.1f | %s\n", i+1, p.getName(), p.getTotalPrice() / 1000.0, p.getDescription());
+			System.out.printf( "%d. %-20s | W %4.1f | %s\n", i + 1, p.getName(), p.getTotalPrice() / 1000.0, p.getDescription() );
 		}
 		System.out.println();
 		System.out.println( "[ Total ]" );
